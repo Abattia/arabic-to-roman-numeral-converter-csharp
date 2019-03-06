@@ -14,6 +14,22 @@ namespace ArabicToRomanTests
 	}
 
         [TestMethod]
+        public void ResturnsDCCLXXVIIFor777()
+        {
+		var result = _arabicToRoman.ToRoman(777);
+
+		Assert.AreEqual("DCCLXXVII", result, false, string.Empty);
+        }
+
+        [TestMethod]
+        public void ResturnsXFor10()
+        {
+		var result = _arabicToRoman.ToRoman(10);
+
+		Assert.AreEqual("X", result, false, string.Empty);
+        }
+
+        [TestMethod]
         public void ResturnsIIIFor3()
         {
 		var result = _arabicToRoman.ToRoman(3);
